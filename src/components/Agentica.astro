@@ -1,0 +1,85 @@
+---
+import { AGENTIC_INTRO, AGENTIC_ROWS } from "../data/agentica";
+---
+
+<section id="agentica" class="work" aria-labelledby="agentica-titulo">
+  <div class="inner">
+    <h2 id="agentica-titulo">Programación agéntica</h2>
+    <p class="intro">{AGENTIC_INTRO}</p>
+    <div class="rows">
+      {
+        AGENTIC_ROWS.map((row) => (
+          <>
+            <div class="tag-cell">
+              <h3>{row.tag}</h3>
+              <p class="sub">{row.sub}</p>
+            </div>
+            <div class="desc-cell">
+              <p>{row.description}</p>
+            </div>
+          </>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .work { padding: 80px 40px; }
+  .inner {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+  }
+  .intro {
+    max-width: 72ch;
+    font-size: 18px;
+    color: var(--text-dim);
+    margin-bottom: 40px;
+  }
+  .rows {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2px;
+    background: var(--border);
+    border: 2px solid var(--border);
+  }
+  .tag-cell {
+    background: var(--card);
+    padding: 36px 32px;
+  }
+  .tag-cell h3 {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .sub {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .desc-cell {
+    background: var(--card);
+    padding: 36px 40px;
+  }
+  .desc-cell p {
+    color: var(--text-dim);
+    font-size: 15px;
+    max-width: 72ch;
+  }
+  @media (max-width: 900px) {
+    .work { padding: 56px 24px; }
+    .inner { padding: 0; }
+    .rows { grid-template-columns: 1fr; }
+  }
+</style>

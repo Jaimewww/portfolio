@@ -18,14 +18,14 @@ Portafolio personal de desarrollador, diseño elegido: artboard 03 bold-blocks (
 
 ## Tasks
 
-- **T1** (S1): Scaffold del proyecto Astro en la raíz (git init, TS, template mínimo, install). Ruta: inline. Commit: separado.
-- **T2** (S2, S5): Tokens y estilos globales (design tokens de la S2, selección, scrollbar, focus, reduced-motion, tipografía). Ruta: inline. Commit: con T3.
-- **T3** (S2, S4): Header + hero (avatar SVG, whoami, h1+cursor, lede, CTAs) + marquee. Ruta: inline. Commit: con T2.
-- **T4** (S3, S4): Sección proyectos: content/collections o data module con los 4 proyectos reales y cards con sombra dura. Ruta: inline. Commit: separado.
-- **T5** (S3, S4): Sección programación agéntica (grid etiqueta+descripción, 3 filas). Ruta: inline. Commit: con T4.
-- **T6** (S3, S4): Skills strip + contacto + footer (© 2026, GitHub Jaimewww). Ruta: inline. Commit: separado.
-- **T7** (S5): Responsive, a11y y pasada de verificación (detector Impeccable + contraste + navegación teclado). Ruta: inline. Commit: separado.
-- **T8** (S6): Insertar email real y link de Futgo cuando el usuario los entregue. Ruta: inline. Commit: con T7 o aparte.
+- **T1** (S1): ✅ Scaffold del proyecto Astro en la raíz. Commit: `4454b60`.
+- **T2** (S2, S5): ✅ Tokens y estilos globales (`src/styles/global.css`, datos de sitio y proyectos en `src/data/`). Commit: `0e80b98` (con T3).
+- **T3** (S2, S4): ✅ Header + hero (avatar SVG, whoami, h1+cursor, lede, CTAs) + marquee. Commit: `0e80b98`.
+- **T4** (S3, S4): ✅ Sección proyectos con los 4 proyectos reales (`src/components/Projects.astro`, data en `src/data/projects.ts`). Commit: `65a0ec7` (con T5).
+- **T5** (S3, S4): ✅ Sección programación agéntica (grid etiqueta+descripción, 3 filas). Commit: `65a0ec7`.
+- **T6** (S3, S4): ✅ Skills strip + contacto + footer + `Base.astro` + `index.astro` (worker, con build en verde). Commit: `222ecb0`.
+- **T7** (S5): ✅ Verificación final: `npm run build` exit 0; detector Impeccable sobre `dist/index.html`: 0 hallazgos; landmarks y aria (nav principal, retrato), reduced-motion, 4 anchors presentes, 5 `rel="noopener"`; contraste verificado (lila vs #111 ≈ 10.2:1). Responsive ≤900px por componente. Sin commit (solo verificación, doc: `0ee56a8` pendiente de nombrar — ver Log L12).
+- **T8** (S6): Pendiente: insertar email real y link de Futgo cuando el usuario los entregue. Ruta: inline. Commit: aparte.
 
 ## Log
 
@@ -40,3 +40,4 @@ Portafolio personal de desarrollador, diseño elegido: artboard 03 bold-blocks (
 - **L9**: «quita simulación» del stack del bloque ODD.
 - **L10**: «cambiemos el color verde lima por un lila claro (a lo gentle-sexy), es como mi marca, pero ten en cuenta que debe mantener armonia y todo debe mantenerse legible» — acento #c4b5fd, contraste verificado.
 - **L11**: «listo, me gusta mas... definamos el stack, tenia pensado astro, que otras opciones me das? usemos odd para esto» — stack decidido: Astro.
+- **L12**: Implementación T1-T7 completada en rama `feat/portafolio-astro` (commits 4454b60, 0e80b98, 65a0ec7, 222ecb0). T6 delegada a worker gentle-ai-worker por backstop de contexto; build exit 0 y detector Impeccable limpio. Pendiente T8 (email real + link Futgo).

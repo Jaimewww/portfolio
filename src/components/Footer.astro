@@ -1,0 +1,33 @@
+---
+import { SITE } from "../data/site";
+---
+
+<footer>
+  <span>© {SITE.copyrightYear} {SITE.name}</span>
+  <span><a href={SITE.github} rel="noopener">GitHub</a></span>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 40px;
+    border-top: 2px solid var(--border);
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+  footer a {
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  footer a:hover { color: var(--accent); }
+  @media (max-width: 900px) {
+    footer {
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 24px;
+    }
+  }
+</style>

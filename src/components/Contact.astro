@@ -1,0 +1,33 @@
+---
+import { SITE } from "../data/site";
+---
+
+<div id="contacto" class="contact">
+  <h2>¿Creamos <span class="hl">algo</span>?</h2>
+  <p>{SITE.contactNote}</p>
+  <a class="btn btn-primary" data-impeccable-ignore="hard-offset-shadow" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+</div>
+
+<style>
+  .contact {
+    padding: 100px 40px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 72px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .hl { color: var(--accent); }
+  p {
+    margin-top: 20px;
+    color: var(--text-dim);
+  }
+  .btn { margin-top: 40px; }
+  @media (max-width: 900px) {
+    .contact { padding: 64px 24px; }
+    h2 { font-size: 40px; }
+  }
+</style>

@@ -9,6 +9,31 @@ export interface Project {
 
 export const PRIVATE_NOTE = "Código privado";
 
+// Public showcase repositories (odd/tasks/portafolio-astro.md S6, T9).
+export interface Showcase {
+  name: string;
+  url: string;
+  note: string;
+}
+
+export const SHOWCASES: Showcase[] = [
+  {
+    name: "Este portafolio",
+    url: "https://github.com/Jaimewww/portfolio",
+    note: "Astro · este repo",
+  },
+  {
+    name: "Laravel modular starter",
+    url: "https://github.com/Jaimewww/laravel-modular-starter",
+    note: "Laravel 11 · módulos + tests",
+  },
+  {
+    name: "odd-cli",
+    url: "https://github.com/Jaimewww/odd-cli",
+    note: "TypeScript · 0 dependencias",
+  },
+];
+
 export const PROJECTS: Project[] = [
   {
     title: "Loxafact",

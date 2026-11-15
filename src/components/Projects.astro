@@ -1,5 +1,5 @@
 ---
-import { PROJECTS } from "../data/projects";
+import { PROJECTS, PRIVATE_NOTE } from "../data/projects";
 ---
 
 <section id="trabajo" class="work" aria-labelledby="trabajo-titulo">
@@ -8,16 +8,16 @@ import { PROJECTS } from "../data/projects";
     <div class="grid">
       {
         PROJECTS.map((project) => (
-          <a class="card" href={project.href} rel="noopener">
+          <div class="card">
             <span>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <span class="foot">
                 <span class="stack">{project.stack}</span>
-                <span class="cta">Ver caso →</span>
+                <span class="private">{PRIVATE_NOTE}</span>
               </span>
             </span>
-          </a>
+          </div>
         ))
       }
     </div>
@@ -53,10 +53,7 @@ import { PROJECTS } from "../data/projects";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-decoration: none;
-    transition: background 0.15s;
   }
-  .card:hover { background: #242424; }
   .card h3 {
     font-size: 32px;
     font-weight: 900;
@@ -80,12 +77,12 @@ import { PROJECTS } from "../data/projects";
     font-size: 12px;
     color: var(--text-dim);
   }
-  .cta {
+  .private {
     font-size: 12px;
-    font-weight: 900;
+    font-family: var(--mono);
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--accent);
+    color: var(--text-dim);
   }
   @media (max-width: 900px) {
     .work { padding: 56px 24px; }

@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "comments": [
+    {
+      "id": "yz77tb40",
+      "file": "01-dark-terminal.html",
+      "selector": "body > main > div:nth-of-type(1) > div > div:nth-of-type(2) > p:nth-of-type(1)",
+      "excerpt": "$ whoami",
+      "comment": "agrega esto a la propuesta 3",
+      "createdAt": "2026-11-15T00:49:21.340Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T00:49:21.379Z",
+      "resolvedAt": "2026-11-15T00:49:44.627Z",
+      "resolution": "Agregué el prompt \"$ whoami\" a la propuesta 3 (03-bold-blocks.html), junto al avatar, en mono con el sigil en lima, adaptado al mundo bold-blocks."
+    },
+    {
+      "id": "8r7tkao7",
+      "file": "01-dark-terminal.html",
+      "selector": "body > header > div",
+      "excerpt": "martin.dev",
+      "comment": "agrega esto tambien a la propuesta 3",
+      "createdAt": "2026-11-15T00:49:34.164Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T00:49:34.174Z",
+      "resolvedAt": "2026-11-15T00:50:08.485Z",
+      "resolution": "Cambié el logo del header de la propuesta 3 de \"M.AGUiRRE\" a \"martin.dev\", conservando el bloque lima del mundo bold-blocks."
+    },
+    {
+      "id": "x88dmbxy",
+      "file": "01-dark-terminal.html",
+      "selector": "body > main > div:nth-of-type(1) > div > div:nth-of-type(2) > h1",
+      "excerpt": "Martín Aguirre, desarrollador full-stack.",
+      "comment": "agrega esta presentacion a la propuesta 3",
+      "createdAt": "2026-11-15T00:49:46.457Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T00:49:46.465Z",
+      "resolvedAt": "2026-11-15T00:50:29.919Z",
+      "resolution": "Reemplacé el título de la propuesta 3 por \"Martín Aguirre, desarrollador full-stack\" (del hero de la 1), en mayúsculas con highlight lima sobre \"desarrollador\"; ajusté el lede para no repetir el rol."
+    },
+    {
+      "id": "q79j4fi8",
+      "file": "01-dark-terminal.html",
+      "selector": "body > main > div:nth-of-type(1) > div > div:nth-of-type(2) > h1 > span:nth-of-type(2)",
+      "excerpt": "",
+      "comment": "agrega esta animación a la propuesta 3",
+      "createdAt": "2026-11-15T00:49:59.675Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T00:49:59.685Z",
+      "resolvedAt": "2026-11-15T00:50:50.121Z",
+      "resolution": "Agregué el cursor de terminal parpadeante (animación blink del hero de la 1) al final del título de la propuesta 3, en bloque lima, respetando prefers-reduced-motion."
+    },
+    {
+      "id": "rumz9pvl",
+      "file": "03-bold-blocks.html",
+      "selector": "body > main > div:nth-of-type(1) > div > h1",
+      "excerpt": "MARTÍN AGUIRRE, DESARROLLADOR FULL-STACK.",
+      "comment": "cambia el nombre por Jaime Landázuri, la presentación también, desde Loja, Ecuador, experiencia de 2 años",
+      "createdAt": "2026-11-15T00:51:21.234Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T00:51:21.237Z",
+      "resolvedAt": "2026-11-15T00:51:42.168Z",
+      "resolution": "Nombre cambiado a \"Jaime Landázuri, desarrollador full-stack\" con lede desde Loja, Ecuador y 2 años de experiencia; de paso actualicé logo (jaime.dev), email y footer para mantener la marca consistente."
+    },
+    {
+      "id": "o8g0m3nv",
+      "file": "03-bold-blocks.html",
+      "selector": "body > main > div:nth-of-type(1)",
+      "excerpt": "$ whoami MARTÍN AGUIRRE, DESARROLLADOR FULL-STACK. Desde Buenos Aires: APIs sólidas, interfaces rápidas, código que el próximo dev puede leer. Cuatro años entregando software en producción, disponible para freelance y equipos remotos. MIRÁ MI TRABAJO ESCRIBIME",
+      "comment": "quita el acento rioplatense en toda la web",
+      "createdAt": "2026-11-15T00:51:33.614Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T00:51:33.616Z",
+      "resolvedAt": "2026-11-15T00:52:24.294Z",
+      "resolution": "Reemplacé el voseo rioplatense por español neutral: \"Mirá\"→\"Mira\", \"Escribime\"→\"Escríbeme\", \"¿Arrancamos algo?\"→\"¿Creamos algo?\", \"Respondé rápido\"→\"Respondo rápido\"."
+    },
+    {
+      "id": "lp9x6o97",
+      "file": "03-bold-blocks.html",
+      "selector": "body > main > div:nth-of-type(1)",
+      "excerpt": "$ whoami JAIME LANDÁZURI, DESARROLLADOR FULL-STACK. Desde Loja, Ecuador: APIs sólidas, interfaces rápidas, código que el próximo dev puede leer. Dos años entregando software en producción, disponible para freelance y equipos remotos. MIRA MI TRABAJO ESCRÍBEME",
+      "comment": "bro llena toda la información con datos reales, obten de tu memoria de engram, por ejemplo: Loxafact legacy, Loxafact laravel, Web veterinaria, futgo, etc",
+      "createdAt": "2026-11-15T03:07:59.149Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T03:07:59.224Z",
+      "resolvedAt": "2026-11-15T03:09:17.876Z",
+      "resolution": "Llené la propuesta 3 con datos reales de Engram: proyectos Loxafact (CodeIgniter), Loxafact Laravel 11, Web Veterinaria (Angular) y Futgo (React Native) con links a los repos reales, marquee y skills reales (PHP/Laravel, Vue, Angular, RN, MySQL, Docker) y GitHub Jaimewww."
+    },
+    {
+      "id": "2b67m5rz",
+      "file": "03-bold-blocks.html",
+      "selector": "body > footer > span:nth-of-type(1)",
+      "excerpt": "© 2025 JAIME LANDÁZURI",
+      "comment": "2026 bro",
+      "createdAt": "2026-11-15T03:10:12.006Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T03:10:12.052Z",
+      "resolvedAt": "2026-11-15T03:10:18.042Z",
+      "resolution": "Actualicé el año del footer de 2025 a 2026."
+    },
+    {
+      "id": "uamd7azh",
+      "file": "03-bold-blocks.html",
+      "selector": "body > main > div:nth-of-type(1)",
+      "excerpt": "$ whoami JAIME LANDÁZURI, DESARROLLADOR FULL-STACK. Desde Loja, Ecuador: APIs sólidas, interfaces rápidas, código que el próximo dev puede leer. Dos años entregando software en producción, disponible para freelance y equipos remotos. MIRA MI TRABAJO ESCRÍBEME",
+      "comment": "agrega una seccion de programación agentica: SDD, ODD, Harness, mcps, agrega con lo que tengo experiencia segun tu memoria de engram",
+      "createdAt": "2026-11-15T03:14:09.470Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T03:14:09.511Z",
+      "resolvedAt": "2026-11-15T03:14:52.937Z",
+      "resolution": "Agregué la sección \"Programación agéntica\" con 4 bloques respaldados por la memoria: SDD (ciclos en Loxafact Laravel, 900+ tests), ODD (docs con log verbatim y RED→GREEN en veterinaria/simulación), Harness (Pi, subagentes, worktrees, Engram) y MCPs (FilmCraft, Roblox Studio, OpenCode). Nav actualizada con link a la sección."
+    },
+    {
+      "id": "foofbc4a",
+      "file": "03-bold-blocks.html",
+      "selector": "#agentica > div > div > div:nth-of-type(2) > span > span > span",
+      "excerpt": "VETERINARIA · SIMULACIÓN",
+      "comment": "quita simulación",
+      "createdAt": "2026-11-15T03:16:01.395Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T03:16:01.436Z",
+      "resolvedAt": "2026-11-15T03:16:08.900Z",
+      "resolution": "Quité \"SIMULACIÓN\" del stack del bloque ODD; queda solo \"VETERINARIA\"."
+    },
+    {
+      "id": "cn5aodb8",
+      "file": "03-bold-blocks.html",
+      "selector": "#agentica > div",
+      "excerpt": "PROGRAMACIÓN AGÉNTICA SDD Spec-Driven Development: ciclos completos de exploración, propuesta, spec, diseño, tareas y verificación por spec. Lo apliqué migrando módulos enteros de Loxafact a Laravel 11, con PRs encadenados y suites de más de 900 tests. LOXAFACT LARAVEL ODD Organic Driven Development",
+      "comment": "lo que te decia era de ejemplo, ya que los mcps y el flujo sdd-odd entran en lo que es harness, hazlo como te parezca mas completo. En resumen, no debias poner SDD, ODD, HARNESS y MCPS asi tal cual te lo dije",
+      "createdAt": "2026-11-15T03:17:35.644Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T03:17:35.678Z",
+      "resolvedAt": "2026-11-15T03:18:08.868Z",
+      "resolution": "Rediseñé la sección agéntica con jerarquía real: intro sobre la práctica, y tres filas etiquetadas — SDD·ODD (el flujo), Harness (el motor) y MCPs (las integraciones) — en grid de dos columnas del mundo bold-blocks, en vez de 4 cards iguales."
+    },
+    {
+      "id": "msy5mcv7",
+      "file": "03-bold-blocks.html",
+      "selector": "body > main > div:nth-of-type(1)",
+      "excerpt": "$ whoami JAIME LANDÁZURI, DESARROLLADOR FULL-STACK. Desde Loja, Ecuador: APIs sólidas, interfaces rápidas, código que el próximo dev puede leer. Dos años entregando software en producción, disponible para freelance y equipos remotos. MIRA MI TRABAJO ESCRÍBEME",
+      "comment": "listo, me gusta mas, una ultima cosa, cambiemos el color verde lima por un lila claro (a lo gentle-sexy), es como mi marca, pero ten en cuenta que debe mantener armonia y todo debe mantenerse legible",
+      "createdAt": "2026-11-15T03:20:29.496Z",
+      "status": "resolved",
+      "sentAt": "2026-11-15T03:20:29.539Z",
+      "resolvedAt": "2026-11-15T03:20:52.363Z",
+      "resolution": "Acento cambiado de lima (#c8f542) a lila claro (#c4b5fd) en toda la artboard vía la variable --accent, incluida la remera del avatar; contraste verificado: lila sobre negro ~10.2:1 y tinta sobre lila ~10.2:1, ambos muy por encima de AA."
+    }
+  ]
+}

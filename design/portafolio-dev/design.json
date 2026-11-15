@@ -1,0 +1,27 @@
+{
+  "title": "Portafolio de desarrollador",
+  "brief": "Portafolio personal para arrancar la carrera de desarrollador, basado en la referencia visual del usuario (oscura, estilo dev/terminal). Tres direcciones: terminal oscura fiel a la referencia, editorial clara y bloques audaces.",
+  "artboards": [
+    {
+      "file": "01-dark-terminal.html",
+      "title": "Terminal oscura",
+      "tradeoff": "Fiel a la referencia: estética dev/terminal con acento verde; menor diferenciación visual frente a otros portafolios del mismo estilo",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "file": "02-light-editorial.html",
+      "title": "Editorial clara",
+      "tradeoff": "Tipografía serif con mucho aire, lee como publicación; menos 'aura de programador' y menos densidad por pantalla",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "file": "03-bold-blocks.html",
+      "title": "Bloques audaces",
+      "tradeoff": "Alto contraste y personalidad fuerte tipo brutalist; puede sentirse agresiva para clientes corporativos conservadores",
+      "width": 1440,
+      "height": 900
+    }
+  ]
+}

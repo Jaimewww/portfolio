@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio — Dirección 2: Editorial clara</title>
+<style>
+  :root {
+    --bg: #faf8f5;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --text-dim: #5c5c5c;
+    --border: #e5e0d8;
+    --accent: #1a1a1a;
+    --accent-bg: #1a1a1a;
+    --link: #0b5cad;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  a { color: inherit; }
+  ::selection { background: #1a1a1a; color: #fff; }
+  html { scrollbar-color: #c9c3b8 var(--bg); scrollbar-width: thin; }
+  :focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 56px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; }
+  nav ul { display: flex; gap: 32px; list-style: none; }
+  nav a {
+    font-size: 14px;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color .15s;
+  }
+  nav a:hover { color: var(--text); }
+
+  .hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 110px 56px 90px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 64px;
+    align-items: center;
+  }
+  .avatar {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    background: #eceae5;
+  }
+  .avatar svg { display: block; width: 100%; height: 100%; }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: 72px;
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    max-width: 16ch;
+  }
+  .hero h1 em { font-style: italic; }
+  .hero p.lede {
+    margin-top: 28px;
+    max-width: 64ch;
+    font-size: 19px;
+    color: var(--text-dim);
+  }
+  .hero-actions { margin-top: 40px; display: flex; gap: 12px; align-items: center; }
+  .btn {
+    display: inline-block;
+    font-size: 15px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 1px solid var(--text);
+    transition: background .15s, color .15s;
+  }
+  .btn-primary { background: var(--accent-bg); color: #fff; font-weight: 600; }
+  .btn-primary:hover { background: #3a3a3a; }
+  .btn-ghost { background: transparent; color: var(--text); }
+  .btn-ghost:hover { background: rgba(26,26,26,0.06); }
+
+  section { max-width: 1100px; margin: 0 auto; padding: 72px 56px; border-top: 1px solid var(--border); }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .section-head h2 { font-family: var(--serif); font-size: 32px; font-weight: 400; }
+  .section-head .count { font-family: var(--mono); font-size: 13px; color: var(--text-dim); }
+
+  /* Project list rows */
+  .project-row {
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    gap: 32px;
+    align-items: baseline;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+  }
+  .project-row:last-of-type { border-bottom: none; }
+  .project-row:hover { background: linear-gradient(to right, rgba(26,26,26,0.03), transparent); }
+  .project-row .year {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--text-dim);
+    font-variant-numeric: tabular-nums;
+  }
+  .project-row h3 {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  .project-row p { font-size: 15px; color: var(--text-dim); max-width: 60ch; }
+  .project-row .arrow {
+    font-size: 22px;
+    color: var(--text-dim);
+    transition: transform .2s;
+  }
+  .project-row:hover .arrow { transform: translateX(6px); color: var(--text); }
+  .project-row .stack-note { font-family: var(--mono); font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+
+  /* About two columns */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .about-grid p { color: var(--text-dim); margin-bottom: 16px; }
+  .skills { list-style: none; }
+  .skills li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 15px;
+  }
+  .skills li span:last-child { font-family: var(--mono); font-size: 13px; color: var(--text-dim); }
+
+  .contact .inner { max-width: 1100px; margin: 0 auto; padding: 90px 56px; }
+  .contact h2 {
+    font-family: var(--serif);
+    font-size: 52px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    max-width: 18ch;
+  }
+  .contact h2 em { font-style: italic; }
+  .contact p { margin-top: 16px; color: var(--text-dim); }
+  .contact .btn-primary { margin-top: 32px; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 56px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-family: var(--mono);
+    color: var(--text-dim);
+  }
+  footer a { color: var(--text-dim); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 900px) {
+    header { padding: 20px 24px; }
+    nav ul { gap: 20px; }
+    .hero, section, .contact .inner, footer { padding-left: 24px; padding-right: 24px; }
+    .hero { padding-top: 64px; padding-bottom: 56px; grid-template-columns: 1fr; }
+    .avatar { order: -1; }
+    .hero h1 { font-size: 44px; }
+    .project-row { grid-template-columns: 1fr; gap: 8px; }
+    .project-row .arrow { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .contact h2 { font-size: 34px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Martín Aguirre</div>
+  <nav aria-label="Principal">
+    <ul>
+      <li><a href="#trabajo">Trabajo</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div>
+      <h1>Hago software que la gente <em>realmente usa</em>, y lo hago bien.</h1>
+      <p class="lede">Cuatro años construyendo productos web de punta a punta: desde el esquema de base de datos hasta la última animación de la interfaz. Trabajo desde Buenos Aires y estoy disponible para proyectos freelance y equipos remotos.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#trabajo">Ver mi trabajo</a>
+        <a class="btn btn-ghost" href="#contacto">Hablemos</a>
+      </div>
+    </div>
+    <div class="avatar">
+      <svg viewBox="0 0 120 120" role="img" aria-label="Retrato de Martín Aguirre">
+        <rect width="120" height="120" fill="#eceae5"/>
+        <path d="M20 120 C20 94 38 86 60 86 C82 86 100 94 100 120 Z" fill="#1a1a1a"/>
+        <rect x="52" y="72" width="16" height="16" rx="7" fill="#d9a06b"/>
+        <ellipse cx="60" cy="52" rx="23" ry="25" fill="#e0b089"/>
+        <path d="M37 50 C35 27 49 20 60 20 C71 20 85 27 83 50 C83 44 77 40 60 40 C43 40 37 44 37 50 Z" fill="#2b2b2b"/>
+        <circle cx="50" cy="53" r="8" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+        <circle cx="70" cy="53" r="8" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+        <line x1="58" y1="53" x2="62" y2="53" stroke="#1a1a1a" stroke-width="2.5"/>
+        <line x1="42" y1="53" x2="37" y2="51" stroke="#1a1a1a" stroke-width="2.5"/>
+        <line x1="78" y1="53" x2="83" y2="51" stroke="#1a1a1a" stroke-width="2.5"/>
+        <path d="M52 66 Q60 71 68 66" fill="none" stroke="#2b2b2b" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <section id="trabajo" aria-labelledby="trabajo-titulo">
+    <div class="section-head">
+      <h2 id="trabajo-titulo">Proyectos seleccionados</h2>
+      <span class="count">2021 — 2025</span>
+    </div>
+
+    <a class="project-row" href="#">
+      <span class="year">2025</span>
+      <span>
+        <h3>FacturaFlow</h3>
+        <p>SaaS de facturación para pymes: emisión de comprobantes electrónicos, reportes y conciliación automática de pagos.</p>
+        <span class="stack-note">Go · PostgreSQL · React</span>
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+
+    <a class="project-row" href="#">
+      <span class="year">2024</span>
+      <span>
+        <h3>PedidoYa Menu</h3>
+        <p>Panel de gestión de menús para cadenas gastronómicas, con sincronización en tiempo real entre sucursales.</p>
+        <span class="stack-note">TypeScript · NestJS · Redis</span>
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+
+    <a class="project-row" href="#">
+      <span class="year">2023</span>
+      <span>
+        <h3>trackr-cli</h3>
+        <p>Herramienta de línea de comandos, open-source, para registrar horas de trabajo y armar reportes por proyecto.</p>
+        <span class="stack-note">Go · SQLite</span>
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+
+    <a class="project-row" href="#">
+      <span class="year">2022</span>
+      <span>
+        <h3>Aula Viva</h3>
+        <p>Plataforma de aulas virtuales para institutos de idiomas: inscripciones, evaluaciones y seguimiento docente.</p>
+        <span class="stack-note">Node.js · MySQL · Vue</span>
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </section>
+
+  <section id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+    <div class="section-head">
+      <h2 id="sobre-mi-titulo">Sobre mí</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>Soy desarrollador full-stack y me obsesiona el detalle: un buen mensaje de error, una consulta que no hace falta, un commit que cuenta la historia.</p>
+        <p>Trabajé en startups de logística y ed-tech, y en los últimos años llevé productos de cero a producción con equipos chicos. Prefiero la simplicidad deliberada: menos capas, más pruebas.</p>
+      </div>
+      <ul class="skills" aria-label="Habilidades">
+        <li><span>Backend</span><span>Go · Node.js · PostgreSQL</span></li>
+        <li><span>Frontend</span><span>React · TypeScript · Next.js</span></li>
+        <li><span>Infraestructura</span><span>Docker · AWS · CI/CD</span></li>
+        <li><span>Testing</span><span>Vitest · Go testing</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div id="contacto" class="contact">
+    <div class="inner">
+      <h2>¿Tenés una idea? Me encantan los problemas nuevos. <em>Escribime.</em></h2>
+      <p>Suelo responder el mismo día.</p>
+      <a class="btn btn-primary" href="mailto:hola@martinaguirre.dev">hola@martinaguirre.dev</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span>© 2025 Martín Aguirre</span>
+  <span>
+    <a href="https://github.com" rel="noopener">GitHub</a> ·
+    <a href="https://linkedin.com" rel="noopener">LinkedIn</a>
+  </span>
+</footer>
+
+</body>
+</html>

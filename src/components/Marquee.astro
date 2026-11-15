@@ -1,0 +1,25 @@
+---
+import { MARQUEE_TECHS } from "../data/projects";
+---
+
+<div class="marquee" aria-hidden="true">
+  {MARQUEE_TECHS.map((tech) => <span>{tech} <b>/</b></span>)}
+</div>
+
+<style>
+  .marquee {
+    display: flex;
+    justify-content: space-around;
+    padding: 18px 40px;
+    border-bottom: 2px solid var(--border);
+    font-family: var(--mono);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+  }
+  .marquee b { color: var(--accent); font-weight: 700; }
+  @media (max-width: 900px) {
+    .marquee { flex-wrap: wrap; gap: 8px; padding: 14px 24px; }
+  }
+</style>

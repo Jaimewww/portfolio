@@ -1,0 +1,64 @@
+/* Design tokens — ported from design/portafolio-dev/03-bold-blocks.html (artboard 03, bold-blocks brutalist, lilac accent). */
+:root {
+  --bg: #111111;
+  --ink: #f5f5f0;
+  --accent: #c4b5fd;
+  --accent-ink: #111111;
+  --card: #1c1c1c;
+  --border: #2e2e2e;
+  --text-dim: #a3a39b;
+  --sans: "Arial Black", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #3a3a3a var(--bg);
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+a { color: inherit; }
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+img, svg { display: block; }
+
+.btn {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 16px 36px;
+  text-decoration: none;
+  border: 2px solid var(--ink);
+  transition: transform 0.15s, background 0.15s, color 0.15s;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+.btn-primary:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.btn-ghost { color: var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: var(--bg); }
